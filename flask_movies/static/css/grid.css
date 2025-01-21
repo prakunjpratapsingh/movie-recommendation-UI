@@ -1,0 +1,208 @@
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.nav-wrapper {
+    background-color: #101010;
+    padding: 10px 0;
+    border-bottom: 2px solid #444;
+}
+
+.nav .logo {
+    font-size: 40px;
+    color: grey;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #D3D3D3;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #D3D3D3;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/* MOVIE GRID */
+#movies-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display 4 movies per row on larger screens */
+    gap: 25px; /* Space between movies */
+    padding: 25px; /* Adjust padding for better spacing */
+}
+
+/* Style for each movie item */
+.movie-item {
+    width: 100%; /* Let the grid control the width */
+    height: 400px; /* Increased height for larger display */
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Enhanced box shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #252525; /* Optional dark background for movie items */
+}
+
+.movie-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8); /* Enhance shadow on hover */
+}
+
+.movie-item img {
+    width: 100%; /* Ensure image covers full width of the item */
+    height: 100%; /* Ensure image covers full height of the item */
+    object-fit: cover; /* Maintain aspect ratio without distortion */
+}
+
+/* MOVIE ITEM CONTENT */
+.movie-item-content {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent overlay for content */
+    color: white;
+}
+
+.movie-item-title {
+    font-size: 16px; /* Reduced font size slightly */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.85); /* Semi-transparent white for titles */
+    margin-bottom: 8px;
+}
+
+.movie-infos {
+    display: flex;
+    gap: 8px;
+    font-size: 12px; /* Smaller text size for additional info */
+    color: #bbb;
+}
+
+.movie-info i {
+    font-size: 12px; /* Smaller icon size */
+}
+
+/* FOOTER */
+footer {
+    background-color: #101010;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 10px;
+}
+
+.footer-menu a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-menu a:hover {
+    color: #D3D3D3;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-item {
+    font-size: 20px;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.social-item:hover {
+    color: #D3D3D3;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: #101010;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* MEDIA QUERY FOR RESPONSIVENESS */
+@media (max-width: 1024px) {
+    #movies-container {
+        grid-template-columns: repeat(3, 1fr); /* Show 3 movies per row on medium screens */
+    }
+
+    .movie-item {
+        height: 350px; /* Slightly reduced height for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #movies-container {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 movies per row on smaller screens */
+    }
+
+    .movie-item {
+        height: 300px; /* Further reduced height for small screens */
+    }
+
+    .movie-item-title {
+        font-size: 14px; /* Smaller title font size for small screens */
+    }
+
+    .movie-infos {
+        font-size: 10px; /* Reduced info text size */
+    }
+}
+
+@media (max-width: 480px) {
+    #movies-container {
+        grid-template-columns: repeat(1, 1fr); /* Single movie per row on very small screens */
+    }
+
+    .movie-item {
+        height: 280px; /* Reduced height for extra small screens */
+    }
+}
+
+/* MOVIE SECTION */
+.movie-section {
+    padding: 15px;
+    margin-bottom: 0px; /* Add some space below the section */
+    background-color: #252525; /* Optional, just to make it visually distinct */
+}
+
+.section-header h2 {
+    margin: 0;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
